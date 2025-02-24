@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renderizador Científico Avanzado</title>
+    <title>Renderizador Científico Funcional</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
@@ -19,25 +19,26 @@
 </head>
 <body>
     <header>
-        <h1>Renderizador mhChem + AsciiMath + DeepSeek</h1>
+        <h1>Renderizador mhChem + AsciiMath + OCR</h1>
     </header>
 
     <main>
-        <!-- Sección de Ejemplos -->
+        <!-- Ejemplos Predefinidos -->
         <section class="examples-section">
             <div class="chem-examples">
-                <h2>Ejemplos Químicos</h2>
+                <h2>Fórmulas Químicas</h2>
                 <div class="example">$\ce{2H2 + O2 -> 2H2O}$</div>
                 <div class="example">$\ce{CH4 + 2O2 -> CO2 + 2H2O}$</div>
             </div>
+            
             <div class="math-examples">
-                <h2>Ejemplos Matemáticos</h2>
+                <h2>Ecuaciones Matemáticas</h2>
                 <div class="example">@sum_(n=1)^∞ 1/n^2 = π^2/6@</div>
                 <div class="example">@e^(iπ) + 1 = 0@</div>
             </div>
         </section>
 
-        <!-- Sección de Carga -->
+        <!-- Entrada de Usuario -->
         <section class="input-section">
             <div class="upload-box">
                 <h2>Cargar Imagen</h2>
@@ -57,13 +58,13 @@
 
         <!-- Resultados -->
         <section class="results-section">
-            <h2>Resultado Renderizado</h2>
+            <h2>Resultado</h2>
             <div id="liveResult"></div>
         </section>
     </main>
 
     <footer>
-        <p>Sitio desarrollado con 🧪 - Alojado en Netlify</p>
+        <p>Sitio funcional con OCR - Alojado en Netlify</p>
     </footer>
 
     <script src="script.js"></script>
