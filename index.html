@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renderizador Científico Avanzado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            loader: {load: ['[tex]/mhchem']},
+            tex: {
+                packages: {'[+]': ['mhchem']},
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                asciimath: {delimiters: [['@', '@']]}
+            }
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Renderizador mhChem + AsciiMath + DeepSeek</h1>
+    </header>
+
+    <main>
+        <!-- Sección de Ejemplos -->
+        <section class="examples-section">
+            <div class="chem-examples">
+                <h2>Ejemplos Químicos</h2>
+                <div class="example">$\ce{2H2 + O2 -> 2H2O}$</div>
+                <div class="example">$\ce{CH4 + 2O2 -> CO2 + 2H2O}$</div>
+            </div>
+            <div class="math-examples">
+                <h2>Ejemplos Matemáticos</h2>
+                <div class="example">@sum_(n=1)^∞ 1/n^2 = π^2/6@</div>
+                <div class="example">@e^(iπ) + 1 = 0@</div>
+            </div>
+        </section>
+
+        <!-- Sección de Carga -->
+        <section class="input-section">
+            <div class="upload-box">
+                <h2>Cargar Imagen</h2>
+                <input type="file" id="imageUpload" accept="image/*">
+                <div class="preview-box" id="imagePreview"></div>
+            </div>
+
+            <div class="draw-box">
+                <h2>Dibujar Ecuación</h2>
+                <canvas id="drawPad"></canvas>
+                <div class="controls">
+                    <button onclick="clearCanvas()">Borrar</button>
+                    <button onclick="processDrawing()">Procesar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados -->
+        <section class="results-section">
+            <h2>Resultado Renderizado</h2>
+            <div id="liveResult"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sitio desarrollado con 🧪 - Alojado en Netlify</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
